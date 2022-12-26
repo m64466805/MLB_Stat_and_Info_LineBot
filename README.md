@@ -16,7 +16,7 @@ Button carousel templates功能
 
 
 ## Finite State Machine
-![fsm](./img/show-fsm.png)
+![fsm](./img/fsm.png)
 
 
 ## Reference
