@@ -76,7 +76,7 @@ class TocMachine(GraphMachine):
 
     def is_going_to_showmeme(self, event):
         text = event.message.text
-        return text.lower() == "show Creator"
+        return text.lower() == "show Meme"
 
     def is_going_to_shownews(self, event):
         text = event.message.text
@@ -293,8 +293,8 @@ class TocMachine(GraphMachine):
 
         img= 'https://cdn.discordapp.com/attachments/943146710589399145/1054104660341964810/breakingnew.jpg'
         title= 'Watch more'
-        uptext= 'Find Creator or back to menu'
-        labels= ['Creator', 'Back to Menu']
+        uptext= 'Find Meme or back to menu'
+        labels= ['Meme', 'Back to Menu']
         texts= ['yes', 'no']
         send_button_message(userid, img, title, uptext, labels, texts)
 

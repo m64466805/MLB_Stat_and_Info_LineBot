@@ -43,7 +43,7 @@ def send_template_message(id, imglinks):
             ImageCarouselColumn(
                 image_url=url,
                 action= URITemplateAction(
-                    label= 'Creator',
+                    label= 'Meme',
                     uri=url
                 )
             )
@@ -700,7 +700,8 @@ def showschedule(userid):
     push_message_own(userid,'No game tommorow')    
 
 def showmeme(userid):
-    push_message_own(userid,'https://github.com/m64466805/MLB_Stat_and_Info_LineBot')
+    push_message_own(userid,'Go Here to see some MLB Memes')
+    push_message_own(userid,'https://www.facebook.com/TheMLBMemes/')
     # imglink='https://cdn.discordapp.com/attachments/943146710589399145/1054104875492982835/Baseball.jpg'
     # send_template_message(userid, imglink)
 
