@@ -29,7 +29,7 @@ machines = {}
 
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
-line_bot_api.push_message(admin_id,TextSendMessage(text='部屬成功'))
+# line_bot_api.push_message(admin_id,TextSendMessage(text='部屬成功'))
 
 
 #callback for testing  connection

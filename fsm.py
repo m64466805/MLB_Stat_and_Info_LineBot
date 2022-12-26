@@ -1,5 +1,5 @@
 from transitions.extensions import GraphMachine
-from utils import send_image_carousel, send_button_message, send_button_carousel, showGames, yesterGames, push_message_own, scrapeBoxscore, searchplayer, searchteam, showstanding, statleader, showschedule, showCreator, shownews, searchgame
+from utils import send_image_carousel, send_button_message, send_button_carousel, showGames, yesterGames, push_message_own, scrapeBoxscore, searchplayer, searchteam, showstanding, statleader, showschedule, showmeme, shownews, searchgame
 
 class TocMachine(GraphMachine):
     def __init__(self, **machine_configs):
@@ -74,7 +74,7 @@ class TocMachine(GraphMachine):
         text = event.message.text
         return text.lower() == "show schedule"
 
-    def is_going_to_showCreator(self, event):
+    def is_going_to_showmeme(self, event):
         text = event.message.text
         return text.lower() == "show Creator"
 
@@ -128,7 +128,7 @@ class TocMachine(GraphMachine):
         img= 'https://cdn.discordapp.com/attachments/943146710589399145/1054067432374943814/gametoday.png'
         title = 'Watch game scores'
         uptext = 'Which day would you like to watch?'
-        labels = ['Game today', 'Game yesterday', 'Enter a date']
+        labels = ['Game today', 'Game yesterday']
         texts = ['today game', 'yesterday game', 'search game']
         send_button_message(userid, img, title, uptext, labels, texts)
 
@@ -271,11 +271,11 @@ class TocMachine(GraphMachine):
         texts= ['search team', 'no']
         send_button_message(userid, img, title, uptext, labels ,texts)
 
-    def on_enter_showCreator(self, event):
-        print('I am entering showCreator')
+    def on_enter_showmeme(self, event):
+        print('I am entering showmeme')
         userid = event.source.user_id
         try:
-            showCreator(userid)
+            showmeme(userid)
             img= 'https://cdn.discordapp.com/attachments/943146710589399145/1054104875492982835/Baseball.jpg'
             title = 'Watch more'
             uptext= 'Watch MLB News or back to menu'

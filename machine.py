@@ -4,7 +4,7 @@ from fsm import TocMachine
 def create_machine():
     machine= TocMachine(
         states=["user", "testing", "searchplayer", "watchGame", "todayGame", "yesterGame", "showplayer", "lobby", "gameBoxscore", "showBoxscore",
-                "searchteam", "showteam", "showstanding", "statleader", "showschedule", "showCreator", "shownews", "searchgame", "showsearchgame"],
+                "searchteam", "showteam", "showstanding", "statleader", "showschedule", "showmeme", "shownews", "searchgame", "showsearchgame"],
         transitions=[
             {
                 "trigger": "advance",
@@ -62,7 +62,7 @@ def create_machine():
             },
             {
                 "trigger": "advance",
-                "source": ["todayGame","yesterGame", "showsearchgame", "showBoxscore", "showstanding", "statleader", "showschedule", "shownews", "showCreator", "showplayer", "showteam"],
+                "source": ["todayGame","yesterGame", "showsearchgame", "showBoxscore", "showstanding", "statleader", "showschedule", "shownews", "showmeme", "showplayer", "showteam"],
                 "dest": "lobby",
                 "conditions": "is_going_to_backLobby",
             },
@@ -135,8 +135,8 @@ def create_machine():
             {
                 "trigger": "advance",
                 "source": "lobby",
-                "dest": "showCreator",
-                "conditions": "is_going_to_showCreator",
+                "dest": "showmeme",
+                "conditions": "is_going_to_showmeme",
             },
             {
                 "trigger": "advance",
@@ -159,12 +159,12 @@ def create_machine():
             {
                 "trigger": "advance",
                 "source": "shownews",
-                "dest": "showCreator",
+                "dest": "showmeme",
                 "conditions": "is_going_to_showsearchgame",
             },
             {
                 "trigger": "advance",
-                "source": "showCreator",
+                "source": "showmeme",
                 "dest": "shownews",
                 "conditions": "is_going_to_boxfromgame",
             },
@@ -195,13 +195,13 @@ def create_machine():
             {
                 "trigger": "go_back",
                 "source": ["testing", "searchplayer", "showplayer", "watchGame", "todayGame", "yesterGame", "gameBoxscore", "showBoxscore",
-                            "showteam", "showstanding", "statleader", "showschedule", "showCreator", "shownews", "searchgame", "showsearchgame"], 
+                            "showteam", "showstanding", "statleader", "showschedule", "showmeme", "shownews", "searchgame", "showsearchgame"], 
                 "dest": "lobby"
             },
             # {
             #     "trigger":"go_back",
             #     "source":["testing","searchplayer","showplayer","watchGame","todayGame","yesterGame","gameBoxscore","showBoxscore",
-            #               "showteam","showstanding","statleader","showschedule","showCreator","shownews","searchgame","showsearchgame"],
+            #               "showteam","showstanding","statleader","showschedule","showmeme","shownews","searchgame","showsearchgame"],
             #     "dest":"lobby"
             # },
             {
