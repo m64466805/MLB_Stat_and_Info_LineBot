@@ -112,7 +112,7 @@ class TocMachine(GraphMachine):
         G_Cole= 'https://cdn.discordapp.com/attachments/943146710589399145/1054062177541177424/Gerrit_Cole.jpg'
         M_Betts= 'https://cdn.discordapp.com/attachments/943146710589399145/1054062206855159829/Mookie_Betts.jpg'
         urls = [S_Ohtani, B_Harper, C_Correa, G_Cole, M_Betts]
-        labels = ['Shohei_Ohtani', 'Bryce_Harper', 'Carlos_Correa', 'Gerrit_Cole', 'Mookie_Betts']
+        labels = ['Ohtani', 'Harper', 'Correa', 'Cole', 'Betts']
         texts = ['Shohei Ohtani', 'Bryce Harper', 'Carlos Correa', 'Gerrit Cole', 'Mookie Betts']
         send_image_carousel(userid, urls, labels, texts)
 
