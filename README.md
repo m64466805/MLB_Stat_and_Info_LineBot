@@ -2,18 +2,12 @@
 
 LINE BOT that provide MLB STAT and Info
 This Line bot is based on a finite state machine
-此機器人提供以下功能
+實作了一個簡單的美國職棒機器人
 Watch MLB games
 check the schedule
 lookup the stats
 search for players
 show news and highlights
-
-並實作了
-Button carousel templates功能
-可以直接點擊訊息模板發送訊息
-
-
 
 ## Finite State Machine
 ![fsm](./img/fsm.png)
